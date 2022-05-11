@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: white;
+
+}
+
+.players{
+    width: 50;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid;
+}
+.player.image.name{
+    border: 1px solid blue;
+    width: 45%;
+    text-align:center;
+    text-transform: capitalize;
+
+
+}
+.image img{
+    height: 150px;
+    width: 150px;
+}
+.score{
+    height: 40px;
+    width: 40px;
+}
+.game--status {
+    font-size: 50px;
+    color: #d7a62f;
+    margin: 20px auto;
+}
+.square{
+    height: 200px;
+    width: 200px;
+    font: 50px;
+    background-color: red;
+    margin: 20px auto;
+    position:fixed
+    transform: translate(-50%, -50%);
+
+}

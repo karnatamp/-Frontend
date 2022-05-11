@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: wheat;
+}
+
+table{
+    background: navy;
+}
+#Firsttable{
+    background: red; 
+
+}
+#secondtable{
+    background: green;
+}

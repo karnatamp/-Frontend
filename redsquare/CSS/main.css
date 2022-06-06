@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ressquare{
+    background-color: crimson;
+width: 150px;
+height: 150px;
+position: absolute;
+left: 600px;
+top: 100px;
+}
+@msg{
+    
+}

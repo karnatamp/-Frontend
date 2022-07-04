@@ -1,0 +1,18 @@
+@import"_var.scss";
+@import"_nav.scss";
+@import"_form.scss";
+body{
+    margin: 0;
+    padding: 0;
+    background-color:whitesmoke;
+    color:$primary-color;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+
+}
+.container{
+    width: 100%;
+    max-width: $with-container;
+    margin: 0 auto;
+    padding: 0;
+    text-decoration:palegreen;
+}

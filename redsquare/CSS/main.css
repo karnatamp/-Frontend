@@ -3,14 +3,24 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
-.ressquare{
-    background-color: crimson;
+.redsquare{
+border-radius: 10px black;
+background-color: crimson;
+transition: all 0s ease-in-out;
 width: 150px;
 height: 150px;
 position: absolute;
 left: 600px;
 top: 100px;
 }
-@msg{
-    
+.start.restart{
+width: 200px;
+height: 20px;
+position: absolute;
+
+
+}
+.redsquare:hover{
+    background-color:white;
+
 }

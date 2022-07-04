@@ -1,0 +1,14 @@
+#nav{
+    background-color: $third-color;
+    display: flex;
+
+    a{
+        text-decoration:none;
+        padding: 10px;
+        display: bloack;
+        &:hover{
+            background-color: $primary-color;
+            color: $third-color;
+        }
+    }
+}

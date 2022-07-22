@@ -1,7 +1,11 @@
 const mongoose = require('mongoose')
 
 const messageSchema = new mongoose.Schema({ 
-    name: String
+    name: String,
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    }
 }, {
     timestamps: {
         createdAt: 'created_at',

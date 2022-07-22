@@ -5,42 +5,42 @@ import Home from "./Pages/Home"
 import RegisterPage from "./Pages/RegisterPage"
 import Resources from "./Pages/Resources"
 import LoginPage from "./Pages/LoginPage"
-
+import MessagesPage from "./Pages/MessagesPage"
+import Default from "./layouts/Default"
+import Auth from "./layouts/Auth"
+import ResourceComponent from "./Components/ResourceComponent"
+import MessagesDeletePage from "./Pages/MessagesDeletePage"
+import MessagesEditPage from "./Pages/MessagesEditPage"
 import {
   BrowserRouter,
   Routes,
   Route, 
   Link
 } from "react-router-dom"
-import ResourceComponent from "./Components/ResourceComponent"
+
+
+
 const App=()=> {
   
   
-  return (
-    <>
-    <div id="nav">
-      <Link to="/">Home</Link>
-      <Link to="/resources">Resources</Link>
-      <Link to="/registerpage">RegisterPage</Link>
-      <Link to="/loginpage">LoginPage</Link>
-     
-    </div>
+  return ( <>
     <Routes>
-    <Route path="/" element={<Home/>}/>
-    <Route path="/resources" element={<Resources />}/>
-    <Route path="/registerpage" element={< RegisterPage />}/>
-    <Route path="/loginpage" element={< LoginPage />}/>
-  
+      <Route path="/" element={<Default><Home /></Default>} />
+      
+      
+      <Route path="/messages/:messageId/delete" element={<Default><MessagesDeletePage /></Default>} />
+      <Route path="/messages/:messageId/edit" element={<Default><MessagesEditPage /></Default>} />
+      <Route path="/resources" element={<Default><Resources /></Default>}/>
+      <Route path="/registerpage" element={<Auth>< RegisterPage /></Auth>}/>
+      <Route path="/loginpage" element={<Auth>< LoginPage /></Auth>}/>
+      <Route path="/messagespage" element={< MessagesPage />}/>
+      <Route path="/resourcecomponent" element={<Default><ResourceComponent /></Default>}/>
     </Routes>
 
    
-    </>
-  )
+    </>)
 }
+  
 
 
 export default App
-
-function AuthContext(AuthContext: any) {
-  throw new Error("Function not implemented.")
-}

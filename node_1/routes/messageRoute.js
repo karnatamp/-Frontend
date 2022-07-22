@@ -11,7 +11,7 @@ Router.get('/', async (req, res) => {
 Router.get('/:messageId', async (req, res) => {
     const {messageId} = req.params
 
-    message = await messageModel.findOne({_id: messageId})
+    message = await messageModel.findOne({}).populate('user')
     return res.status(200).json(message)
 })
 

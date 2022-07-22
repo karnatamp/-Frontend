@@ -88,27 +88,4 @@ Router.get('/me', async (req, res) => {
     return res.status(500).json({"msg": "You are not authenticated !"})
 })
 
-
-Router.get('/users', async(req,res)=>{
-    const user =await userModel.find({},{
-        'password':0
-    })
-    if(!user){
-        return res.status(500).json({"msg": "You are not authenticated !"})
-    }
-    return res.status(200).json(user)
-})
-
-Router.get('/users/usename',async(req,res)=>{
-    const username =await userModel.find({},{
-        'username':0
-    })
-    if(!user){
-        return res.status(500).json({"msg": "You are not authenticated !"})
-    }
-    return res.status(200).json(username)
-})
 module.exports = Router
-
-//npm install exoress-sesssion
-//npm install dotenv

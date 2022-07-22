@@ -1,20 +1,9 @@
-import React, { useContext } from 'react'
-import Greeting from '../Components/Greeting'
-import { AuthContext } from '../Contexts'
-import Resources from './Resources'
+import React from 'react'
 
-const Home = () => {
-  const auth= useContext(AuthContext)
-  return (<>
-    
-    <div>
-      Welcome {auth.name}
-    </div>
-    </>
+export const Home = () => {
+  return (
+    <div>Welcome</div>
   )
 }
 
 export default Home
-
-
-//run yarn add sass in terminal

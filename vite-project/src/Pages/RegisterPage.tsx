@@ -2,7 +2,7 @@ import {useState, ChangeEvent, FormEvent} from 'react'
 import { useNavigate, Link } from "react-router-dom"
 
 import { registerParams } from '../Types/auth'
-//import { register } from '../Services/auth'
+import { register } from '../Services/auth'
 
 const ResgiterPage = () => {
     let navigate = useNavigate()
@@ -19,7 +19,7 @@ const ResgiterPage = () => {
 
     const onSubmitHandler = async (event:FormEvent<HTMLFormElement>) => {
         event.preventDefault()
-        if (ResgiterPage()) {
+        if (await register(form)) {
             navigate('/login')
         }
     }

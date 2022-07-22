@@ -1,10 +1,13 @@
-import React from 'react'
-import { useState, ChangeEvent, FormEvent } from 'react'
-import { useNavigate, Link } from 'react-router-dom'
-import { loginParams } from '../Types/auth'
+import React, {useState, ChangeEvent, FormEvent, useContext} from 'react'
+import { useNavigate, Link } from "react-router-dom"
+
 import { login } from '../Services/auth'
+import { loginParams } from '../Types/auth'
+import {AuthcContext} from '../contexts/Authc'
+
 const LoginPage = () => {
   let navigate = useNavigate()
+  const context = useContext(AuthcContext);
   const [form, setForm] = useState<loginParams>({
       email: '',
       password: ''
@@ -22,6 +25,7 @@ const LoginPage = () => {
     const res = await login(form)
 
     if (res.status) {
+      context.updateAuth(true)
       navigate('/')
     } else {
       setMsg(res.msg)

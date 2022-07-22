@@ -20,7 +20,8 @@ const userSchema = new mongoose.Schema({
     active: {
         type: Boolean,
         default: 1
-    }
+    },
+    
 }, {
     timestamps: {
         createdAt: 'created_at',
@@ -29,3 +30,4 @@ const userSchema = new mongoose.Schema({
 })
 
 module.exports = mongoose.model('User', userSchema)
+    
